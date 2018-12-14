@@ -142,6 +142,49 @@ jQuery(function($) {
         stopOnHover:true
  
       });
+	    $("#ouroldteam-carousel").owlCarousel({
+ 
+        navigation : true, // Show next and prev buttons
+        navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        slideSpeed : 800,
+        pagination:false,
+        items : 5,
+        rewindNav: true,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        stopOnHover:true
+ 
+      });
+	  
+	        //advisoryteam-carousel
+      $("#advisoryteam-carousel").owlCarousel({
+ 
+        navigation : true, // Show next and prev buttons
+        navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        slideSpeed : 800,
+        pagination:false,
+        items : 2,
+        rewindNav: true,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        stopOnHover:true
+ 
+      });
+	  
+	     //ourteam
+      $("#ourteam-carousel").owlCarousel({
+ 
+        navigation : true, // Show next and prev buttons
+        navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        slideSpeed : 800,
+        pagination:false,
+        items : 5,
+        rewindNav: true,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+        stopOnHover:true
+ 
+      });
 
       /* ----------------------------------------------------------- */
       /*  Back to top
