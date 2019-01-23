@@ -37,7 +37,7 @@
 	<!-- Bxslider -->
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 
-    
+   <script type="text/javascript" src="js/jquery.js"></script> 
 </head>
 	
 <body>
@@ -104,7 +104,7 @@
 		                        </ul>
 	                       	</li>
 							<li><a href="gallery.html">Gallery</a></li>
-	                       	<li><a href="membership.html">Membership</a></li>
+	                       	<!-- <li><a href="membership.html">Membership</a></li> -->
 	                      	<!-- <li><a href="tta-donation.html">TAI Donation</a></li> -->
 	            			<li><a href="contact.html">Contact</a></li>
 	                        
@@ -143,16 +143,7 @@
 	    </div>
 	 </section>
 	<!-- Subpage title end -->
-<script>
-$('#registerForm').submit(function () {
- sendContactForm();
- return false;
-});
-function sendContactForm(){
-    
-    setTimeout(alert('test'), 2000);
-}
-</script>
+
 	<div class="gap-40"></div>
 	<div class="container"> 
 <div class="row">
@@ -163,6 +154,8 @@ function sendContactForm(){
 	  		</div>
 	    </div> 
 		</div>
+
+
 	<section id="Contact-page">
 		<div class="container">
 			<div class="row">
@@ -170,7 +163,7 @@ function sendContactForm(){
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<div class="contact-form">
 						<h3>Register</h3>
-						<form id="registerForm" action="http://golars360.com:8080/TeluguAssociation/rest/submitForm" onsubmit="javascript:void(0);"  method="post" role="form">
+						<form id="registerForm" action="http://40.121.46.130:8080/TeluguAssociation/rest/submitForm"  method="post" role="form">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -264,7 +257,26 @@ function sendContactForm(){
 		</div><!--/ container end -->
 	</section>
 	
+<script type='text/javascript'>
+    /* attach a submit handler to the form */
+$("#registerForm").submit(function(event){
 
+	var post_url = $(this).attr("action"); //get form action url
+	var request_method = $(this).attr("method"); //get form GET/POST method
+	var form_data = $(this).serialize(); //Encode form elements for submission
+	setTimeout(function(){ alert("Details submitted succesfully..."); }, 100);
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		crossDomain: true,
+		dataType: 'jsonp',
+		data : form_data
+	}).done(function(response){ //
+		alert(response);
+	});
+});
+
+		</script>
     
 
 	<!-- Main Footer start -->
@@ -355,7 +367,7 @@ function sendContactForm(){
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About Us</a></li>
 							<li><a href="gallery.html">Gallery</a></li>
-							 <li><a href="membership.html">Membership</a></li>
+							 <!-- <li><a href="membership.html">Membership</a></li> -->
 	                       <li><a href="contact.html">Contact Us</a></li>
 						</ul>
 					</div>
@@ -379,7 +391,7 @@ function sendContactForm(){
 	<!-- Javascript Files
 	================================================== -->
 	<!-- initialize jQuery Library -->
-	<script type="text/javascript" src="js/jquery.js"></script>
+	
 	<!-- Bootstrap jQuery -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- Owl Carousel -->
